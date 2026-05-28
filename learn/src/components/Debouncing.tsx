@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function App() {
-    const api_key = "9947f839752b4263c9e6c9f0a811e93e";
-    const api = "https://api.openweathermap.org/data/2.5/weather";
+    const api_key = import.meta.env.VITE_api_key;
+    const api = import.meta.env.VITE_api;
 
     const [data, setData] = useState(null);
     const [city, setCity] = useState("");
